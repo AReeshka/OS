@@ -3,8 +3,8 @@
 int  main()
 {
     char buff[1024];
-	int i = 1;
-	while(i > 0){
+    int i = 1;
+    while(i > 0){
         i = read(0, buff, 1024);
         int k = 0;
         while (i > k){
@@ -15,8 +15,8 @@ int  main()
             k += j;
         }
     }
-	if (i < 0){
-	write(2, "Error in read\n", 15);
+    if (i < 0){
+        write(2, "Error in read\n", 15);
     }
     return 0;
 }
