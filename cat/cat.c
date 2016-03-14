@@ -7,15 +7,15 @@ int  main()
 	while(i > 0){
         i = read(0, buff, 1024);
         int k = 0;
-        while (i>k){
-            int j = write(1, buff+k, i-k);
-            if(j<0){
+        while (i > k){
+            int j = write(1, buff + k, i - k);
+            if (j < 0){
                 write(2, "Error in write\n", 16);
             }
-            k+=j;
+            k += j;
         }
     }
-	if(i<0){
+	if (i < 0){
 	write(2, "Error in read\n", 15);
     }
     return 0;
